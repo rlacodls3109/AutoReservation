@@ -61,8 +61,8 @@ for i in range(1,7):
                             driver.find_element(By.XPATH,
                                                 "//*[@id=\"bookingFrm\"]/table/tbody/tr[4]/td/div/div[1]/div/div[3]/div/ul/li[13]").click()
                         inputText("bookingNm", "타석예약")
-                        inputText("bookingHp", "0317787755")
-                        inputText("managerNm", "임수진")
+                        inputText("bookingHp", "031")
+                        inputText("managerNm", "김채인")
 
                         driver.find_element(By.CLASS_NAME, "btn-type-bk").click()
                         time.sleep(0.5)
