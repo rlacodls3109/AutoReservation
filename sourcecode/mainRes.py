@@ -20,15 +20,23 @@ driver.get('https://fms.friendsscreen.kr/account')
 
 driver.find_element(By.CLASS_NAME,"login-btn").click()
 try:
+    time.sleep(1)
+    driver.find_element(By.XPATH, "//*[@id=\"non_payment_btn\"]").click()
+except:
+    print("정산완료1")
+
+try:
+    time.sleep(1)
     driver.find_element(By.CLASS_NAME,"common-pop-cancel").click()
 except:
-    print("정산완료")
+    print("정산완료3")
 
 driver.find_element(By.XPATH,"//*[@id=\"wrapper\"]/ul/li[2]/a").click()
 
 driver.find_element(By.CLASS_NAME, "date-ico").click()
 time.sleep(0.3)
 driver.find_element(By.CLASS_NAME, "ui-datepicker-next").click()
+
 #날짜선택반복
 for i in range(1,7):
    for j in range(1,8):
