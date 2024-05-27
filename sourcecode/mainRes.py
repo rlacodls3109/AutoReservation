@@ -18,6 +18,7 @@ driver = webdriver.Chrome(options=chrome_options)
 #로그인
 driver.get('https://fms.friendsscreen.kr/account')
 
+#사이트에 접속하면 자동으로 아이디 비밀번호가 입력되므로 아이디비번 입력은 생략함
 driver.find_element(By.CLASS_NAME,"login-btn").click()
 try:
     time.sleep(1)
